@@ -1,0 +1,300 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> 接口测试报告</title>
+    <style type="text/css">
+     /* CSS样式制作 */  
+      *{padding:0px; margin:0px;}
+      a{text-decoration:none; color:black;}
+       #tab ul{list-style:none; height:50px;line-height:50px; border-bottom:4px #FF8000 solid;text-align:center}
+       #tab ul li{cursor:pointer;float:left;list-style:none height:55px; line-height:30px;padding:0px 10px; margin:0px 15px; border:3px solid #FF8000; border-bottom:3px solid #FF8000;text-align:center }
+       .hide{display:none;}
+	   .on{background:#2894FF;}
+    </style>
+	<link href="js/reportng.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/reportng.js"></script>
+	<script src="js/echarts.js"></script>
+    <script type="text/javascript">
+    // JS实现选项卡切换
+    window.onload = function(){
+		var myTab = document.getElementById("tab");    //整个div
+		var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
+		var myLi = $("#tab ul li");    //数组
+		var myDiv = $("#tab>div"); //数组
+		console.log(myDiv);
+		myLi.click(function(){
+				var index = $(this).index();
+				myLi.removeClass("on").addClass("off");
+				myDiv.removeClass("show").addClass("hide");
+				$(this).removeClass("off").addClass("On");
+			    if($(this).attr('id')=='data'){$('#list').removeClass('On')}
+				else{$('#data').removeClass('On')}
+				myDiv.eq(index).removeClass("hide").addClass("show");
+		})
+	}
+    </script>
+</head>
+<body style="background:#F0FFFF"><!-- HTML页面布局 -->
+	<br>
+	<div id ="tab" style="font-size:16px;">
+	<p id="top1" style="font-weight:bold;font-size:32px;font-family:楷体;" align="center">谷仓API测试报告(2017-01-08 12:00:00)</p>
+		<br>
+        <ul>
+        <li class="off" id="list">测试结果明细</li>
+        <li class="on" id="data">测试结果统计</li>
+        </ul>
+		<br>
+
+		<div id="firstpage" class="hide" align="center">
+			<table width="95%" height="100" border="1" align="center" cellspacing="0" rules="all" style="font-family:楷体;table-layout:fixed;font-size:20px;" width="500px">
+			<br>
+			<thead>
+				<tr height="45">
+					<th  WIDTH="150px" >接口名称</th>
+					<th  WIDTH="300px" >用例名称</th>
+					<th  WIDTH="400px" >请求参数</th>
+					<th  WIDTH="400px" >Response(响应)</th>
+					<th  WIDTH="200px" >测试结果</th>
+				</tr>
+			</thead>
+			<tbody style="font-family:楷体;table-layout:fixed;font-size:16px" align="center" >
+
+			<tr height="30">
+				<!接口名称>
+				<th style="word-wrap:break-word;font-size:20px;" rowspan=1>null</th>
+				<!用例名称>
+				<td style="word-wrap:break-word;">获取国家列表:</td>
+				<!请求参数>
+				<td style="word-wrap:break-word;">
+					<a align="left" style="text-decoration:underline;" href="javascript:toggleElement('exception-9269411', 'block')" title="Click to expand/collapse"><b><font color="orange">requestdata</font></b></a>
+					<br>
+					<div align="left" class="stackTrace" id="exception-9269411" ><small>paramsJson</small></div>
+				</td>
+				<!Response>
+				<td style="word-wrap:break-word;">
+					<a align="left" style="text-decoration:underline;" href="javascript:toggleElement('exception-9269415', 'block')" title="Click to expand/collapse"><b><font color="orange">预期结果：null,执行异常</font></b></a>
+					<br>
+					<div align="left" class="stackTrace" id="exception-9269415" ><small>paramsJson</small></div>
+				</td>
+				<!测试结果>
+				<td><font color="orange">OTHER</font></td>
+			</tr>
+
+			<tr height="30">
+				<th style="word-wrap:break-word;font-size:20px;" rowspan=2>null</th>
+				<td style="word-wrap:break-word;">获取国家列表:</td>
+				<td style="word-wrap:break-word;">
+					<a align="left" style="text-decoration:underline;" href="javascript:toggleElement('exception-92694', 'block')" title="Click to expand/collapse"><b><font color="LimeGreen">RequestData(请求参数)</font></b></a>
+					<br>
+					<div align="left" class="stackTrace" id="exception-92694" ><small><paramsJson>{"pageSize":"1","page":1}</paramsJson></small></div>
+				</td>
+				<td style="word-wrap:break-word;">
+					<a align="left" style="text-decoration:underline;" href="javascript:toggleElement('exception-638869', 'block')" title="Click to expand/collapse"><b><font color="LimeGreen">预期结果：Success+null，执行通过</font></b></a>
+					<br>
+					<div align="left" class="stackTrace" id="exception-638869" ><small> {"Body":{"callServiceResponse":{"response":"{"ask":"Succ</small></div>
+				</td>
+				<td><font color="LimeGreen">PASS</font></td>
+			</tr>
+			<tr height="30">
+			<td style="word-wrap:break-word;">获取国家列表:</td>
+			<td style="word-wrap:break-word;">
+				<a align="left" style="text-decoration:underline;" href="javascript:toggleElement('exception-926904', 'block')" title="Click to expand/collapse"><b><font color="LimeGreen">RequestData(请求参数)</font></b></a>
+				<br>
+				<div align="left" class="stackTrace" id="exception-926904" ><small><paramsJson>{"pageSize":"1","page":1}</paramsJson></small></div>
+			</td>
+			<td style="word-wrap:break-word;">
+				<a align="left" style="text-decoration:underline;" href="javascript:toggleElement('exception-6388609', 'block')" title="Click to expand/collapse"><b><font color="LimeGreen">预期结果：Success+null，执行通过</font></b></a>
+				<br>
+				<div align="left" class="stackTrace" id="exception-6388609" ><small> {"Body":{"callServiceResponse":{"response":"{"ask":"Succ</small></div>
+			</td>
+			<td><font color="LimeGreen">PASS</font></td>
+			</tr>
+
+			<tr height="30">
+				<!接口名称>
+				<th style="word-wrap:break-word;font-size:20px;" rowspan=1>null</th>
+				<!用例名称>
+				<td style="word-wrap:break-word;">获取国家列表:</td>
+				<!请求参数>
+				<td style="word-wrap:break-word;">
+					<a align="left"  style="text-decoration:underline;" href="javascript:toggleElement('exception-926949', 'block')" title="Click to expand/collapse"><b><font color="red">requestdata</font></b></a>
+					<br>
+					<div align="left" class="stackTrace" id="exception-926949" ><small>paramsJson</small></div>
+				</td>
+				<!Response>
+				<td style="word-wrap:break-word;">
+					<a align="left" style="text-decoration:underline;" href="javascript:toggleElement('exception-9269418', 'block')" title="Click to expand/collapse"><b><font color="red">预期结果：null,执行失败</font></b></a>
+					<br>
+					<div align="left" class="stackTrace" id="exception-9269418" ><small>paramsJson</small></div>
+				</td>
+				<!测试结果>
+				<td><font color="red">FAIL</font></td>
+			</tr>
+
+			</tbody>
+			</table>
+			<br>
+			<a href="#firstPage" style="font-size:18px;">返回顶部</a>
+		</div>
+
+		<div id="secondPage" class="show" align="center" style="width:1800px;height:700px;">
+			<table width="90%" cellspacing="0" border="1" align="center" style="font-family:楷体;table-layout:fixed;font-size:20px;width:500px" rules="all">
+				<tbody align="center" >
+				<tr height="60" ><td>测试用例总数</td> <td>25</td> <td>测试通过数</td> <td> 10</td><td>测试失败数</td>  <td> 10</td>  <td>未执行/异常</td> <td> 5</td></tr>
+				</tbody>
+				<div id="main" class="show" width="110%" style="width: 1800px;height:650px;">
+					<script type="text/javascript">
+						// 基于准备好的dom，初始化echarts实例
+						var app = echarts.init(document.getElementById('main'));
+						var posList = ['inside'];
+
+						app.configParameters = {
+							rotate: {
+								min: 100,
+								max: 200
+							},
+							align: {
+								options: {
+									left: 'left',
+									center: 'center',
+									right: 'right'
+								}
+							},
+							verticalAlign: {
+								options: {
+									top: 'top',
+									middle: 'middle',
+									bottom: 'bottom'
+								}
+							},
+							position: {
+								options: echarts.util.reduce(posList, function (map, pos) {
+									map[pos] = pos;
+									return map;
+								}, {})
+							},
+							distance: {
+								min: 2,
+								max: 20
+							}
+						};
+
+						app.config = {
+							rotate: 90,
+							align: 'left',
+							verticalAlign: 'middle',
+							position: 'insideBottom',
+							distance: 15,
+							onChange: function () {
+								var labelOption = {
+									normal: {
+										rotate: app.config.rotate,
+										align: app.config.align,
+										verticalAlign: app.config.verticalAlign,
+										position: app.config.position,
+										distance: app.config.distance
+									}
+								};
+								myChart.setOption({
+									series: [{
+										label: labelOption
+									}, {
+										label: labelOption
+									}, {
+										label: labelOption
+									}, {
+										label: labelOption
+									}]
+								});
+							}
+						};
+
+
+						var labelOption = {
+							normal: {
+								show: true,
+								position: app.config.position,
+								distance: app.config.distance,
+								align: app.config.align,
+								verticalAlign: app.config.verticalAlign,
+								rotate: app.config.rotate,
+								formatter: '{c}  {name|{a}}',
+								fontSize: 16,
+								rich: {
+									name: {
+										textBorderColor: '#fff'
+									}
+								}
+							}
+						};
+
+						option = {
+							color: ['LimeGreen', 'red', 'orange'],
+							tooltip: {
+								trigger: 'axis',
+								axisPointer: {
+									type: 'shadow'
+								}
+							},
+							legend: {
+								data: ['PASS', 'FAIL', 'OTHER']
+							},
+							toolbox: {
+								show: true,
+								orient: 'vertical',
+								left: 'right',
+								top: 'center',
+								feature: {
+									mark: {show: true},
+									dataView: {show: true, readOnly: false},
+									magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+									restore: {show: true},
+									saveAsImage: {show: true}
+								}
+							},
+							calculable: true,
+							xAxis: [
+								{
+									type: 'category',
+									axisTick: {show: false},
+									data: ['API1', 'API2', 'API3', 'API4', 'API5', 'API6', 'API7', 'API8', 'API9', 'API10', 'API11', 'API12', 'API13', 'API14']
+								}
+							],
+							yAxis: [
+								{
+									type: 'value'
+								}
+							],
+							series: [
+								{
+									name: 'PASS',
+									type: 'bar',
+									barGap: 0,
+									label: labelOption,
+									data: [13, 12, 5, 8, 3,12,4,9,0,1,4,23,6,6]
+								},
+								{
+									name: 'FAIL',
+									type: 'bar',
+									label: labelOption,
+									data: [3, 2, 14, 8, 3,12,4,9,6,1,4,11,6,6]
+								},
+								{
+									name: 'OTHER',
+									type: 'bar',
+									label: labelOption,
+									data: [10, 12, 5, 4, 9,12,4,9,14,1,0,23,6,6]
+								}
+							]
+						};
+						// 使用刚指定的配置项和数据显示图表。
+						app.setOption(option);
+					</script>
+				</div>
+			</table>
+		</div>
+
+</div>
+</body>
+</html>

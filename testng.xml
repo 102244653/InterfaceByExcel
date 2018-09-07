@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="谷仓API自动化测试" >
+
+    <test name="谷仓API测试">
+        <classes>
+            <!--生成报告-->
+            <class name="TestCases.ExcelReport"></class>
+            <!--产品模块接口-->
+            <class name="TestCases.ProductAPI"></class>
+            <!--入库单模块接口-->
+            <class name="TestCases.AsnAPI"></class>
+            <!--订单模块接口-->
+            <class name="TestCases.OrderAPI"></class>
+            <!--售后单模块接口-->
+            <class name="TestCases.AfterSaleAPI"></class>
+            <!--其他接口-->
+            <class name="TestCases.OtherAPI"></class>
+        </classes>
+    </test>
+
+
+</suite>
+
